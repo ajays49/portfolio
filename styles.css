@@ -238,3 +238,69 @@ footer a {
     color: #fff; /* Makes the links white */
     text-decoration: none; /* Removes the underline */
 }
+/* Styles for mobile devices */
+@media (max-width: 767px) {
+    .main-content {
+        flex-direction: column;
+        height: auto; /* Remove height restriction */
+    }
+
+    .left-section, .right-section {
+        padding: 20px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 140px;
+    }
+
+    .right-section h2 {
+        font-size: 24px;
+    }
+
+    .info-box {
+        margin: 20px auto;
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .skills-container, .languages-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-box, .lang-box {
+        margin-bottom: 10px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+}
+
+/* Styles for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main-content {
+        flex-direction: column;
+        height: auto; /* Remove height restriction */
+    }
+
+    .left-section, .right-section {
+        padding: 30px;
+    }
+
+    .profile-image {
+        width: 140px;
+        height: 160px;
+    }
+
+    .right-section h2 {
+        font-size: 28px;
+    }
+
+    .info-box {
+        margin: 25px auto;
+        padding: 20px;
+        max-width: 85%;
+    }
+}
