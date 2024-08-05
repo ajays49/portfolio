@@ -268,7 +268,7 @@ footer a {
 
     .left-section {
         height: auto;
-        overflow: hidden;
+        background-image: none; /* Remove background image for mobile */
     }
 
     .left-image {
@@ -280,6 +280,10 @@ footer a {
     /* Hamburger menu styles */
     .mobile-nav {
         position: relative;
+    }
+
+    .desktop-nav {
+        display: none; /* Hide desktop nav on mobile */
     }
 
     .hamburger-menu {
@@ -299,6 +303,7 @@ footer a {
         right: 0;
         background-color: #4b6cb7;
         z-index: 1000;
+        width: 100%;
     }
 
     .nav-dropdown.active {
