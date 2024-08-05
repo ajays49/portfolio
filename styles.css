@@ -252,7 +252,8 @@ footer a {
 }
 /* Existing styles remain unchanged */
 
-/* Media query for mobile devices */
+/* Existing styles remain unchanged */
+
 @media (max-width: 767px) {
     .main-content {
         flex-direction: column;
@@ -261,84 +262,69 @@ footer a {
 
     .left-section, .right-section {
         width: 100%;
-        padding: 20px;
+        padding: 0;
         box-sizing: border-box;
     }
 
     .left-section {
-        height: 50vh; /* Use viewport height for better responsiveness */
-        background-image: url('bg2.jpg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: relative;
+        height: auto;
+        overflow: hidden;
     }
 
-    .left-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: inherit;
-        background-size: cover;
-        background-position: center;
-        opacity: 0.7; /* Adjust opacity as needed */
-    }
-
-    .right-section {
-        background-color: #4b6cb7;
-    }
-
-    .profile-image {
-        width: 120px;
-        height: 120px;
-    }
-
-    .right-section h2 {
-        font-size: 24px;
-    }
-
-    .right-section p {
-        font-size: 14px;
-    }
-
-    .desktop-nav {
-        display: none;
-    }
-
-    .mobile-nav {
+    .left-image {
+        width: 100%;
+        height: auto;
         display: block;
+    }
+
+    /* Hamburger menu styles */
+    .mobile-nav {
+        position: relative;
     }
 
     .hamburger-menu {
         display: block;
         text-align: right;
-        padding: 10px;
+        padding: 15px;
+        cursor: pointer;
+        background-color: #4b6cb7;
+        color: #fff;
     }
 
-    .nav-links {
+    .nav-dropdown {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #4b6cb7;
+        z-index: 1000;
     }
 
-    .nav-links.active {
+    .nav-dropdown.active {
         display: block;
     }
 
-    /* Adjust other sections for better mobile layout */
-    .info-box {
-        margin: 20px 10px;
+    .nav-links {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links li {
         padding: 15px;
+        border-bottom: 1px solid #fff;
     }
 
-    .skills-container, .languages-container {
-        justify-content: space-around;
+    .nav-links li:last-child {
+        border-bottom: none;
     }
 
-    .skill-box, .lang-box {
-        margin: 5px;
-        font-size: 12px;
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
     }
 }
 
@@ -350,5 +336,16 @@ footer a {
 
     .desktop-nav {
         display: block;
+    }
+
+    .left-section {
+        flex: 7;
+        background-image: url('bg2.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .left-image {
+        display: none;
     }
 }
