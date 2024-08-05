@@ -268,7 +268,7 @@ footer a {
     .left-section {
         height: 50vh; /* Use viewport height for better responsiveness */
         background-image: url('bg2.jpg');
-        background-size: cover;
+        background-size: contain;
         background-position: center;
         position: relative;
     }
