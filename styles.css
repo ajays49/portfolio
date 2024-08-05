@@ -373,7 +373,7 @@ footer a {
     }
 
     .left-section {
-        height: 300px; /* Set a fixed height for mobile */
+        height: fit-content; /* Set a fixed height for mobile */
         background-image: url('bg2.jpg');
         background-size: cover;
         background-position: center;
