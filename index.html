@@ -198,18 +198,26 @@
     });
 </script>
     <script>
-    document.getElementById('hamburger-menu').addEventListener('click', function() {
-    const navDropdown = document.querySelector('.nav-dropdown');
-    navDropdown.classList.toggle('active');
-});
-
-// Close dropdown when clicking outside
-document.addEventListener('click', function(event) {
-    const navDropdown = document.querySelector('.nav-dropdown');
+document.addEventListener('DOMContentLoaded', function() {
     const hamburgerMenu = document.getElementById('hamburger-menu');
-    if (!hamburgerMenu.contains(event.target) && !navDropdown.contains(event.target)) {
-        navDropdown.classList.remove('active');
-    }
+    const navDropdown = document.querySelector('.nav-dropdown');
+
+    hamburgerMenu.addEventListener('click', function(event) {
+        event.stopPropagation();
+        navDropdown.classList.toggle('active');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!hamburgerMenu.contains(event.target) && !navDropdown.contains(event.target)) {
+            navDropdown.classList.remove('active');
+        }
+    });
+
+    // Prevent clicks inside the dropdown from closing it
+    navDropdown.addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
 });
 </script>
 
