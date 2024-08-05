@@ -318,7 +318,7 @@ footer a {
 
     .nav-links li {
         padding: 15px;
-        border-bottom: 1px solid #fff;
+        border-bottom: none;
     }
 
     .nav-links li:last-child {
