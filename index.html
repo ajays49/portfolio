@@ -24,14 +24,16 @@
             <div class="hamburger-menu" id="hamburger-menu">
                 <i class="fas fa-bars"></i>
             </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#languages">Languages</a></li>
-            </ul>
+            <div class="nav-dropdown">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#languages">Languages</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -197,8 +199,17 @@
 </script>
     <script>
     document.getElementById('hamburger-menu').addEventListener('click', function() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
+    const navDropdown = document.querySelector('.nav-dropdown');
+    navDropdown.classList.toggle('active');
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+    const navDropdown = document.querySelector('.nav-dropdown');
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    if (!hamburgerMenu.contains(event.target) && !navDropdown.contains(event.target)) {
+        navDropdown.classList.remove('active');
+    }
 });
 </script>
 
