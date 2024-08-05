@@ -358,3 +358,57 @@ footer a {
         font-size: 18px;
     }
 }
+/* Existing styles remain unchanged */
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+    .main-content {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .left-section {
+        height: 300px; /* Set a fixed height for mobile */
+        background-image: url('bg2.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .hamburger-menu {
+        display: block;
+        text-align: right;
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+}
+
+/* Media query for desktop */
+@media (min-width: 768px) {
+    .mobile-nav {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: block;
+    }
+}
